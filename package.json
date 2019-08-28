@@ -1,0 +1,16 @@
+{
+  "name": "ApartmentRentSupport",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:KevinTroyT/ApartmentRentSupport.git",
+  "author": "KevinTroyT <q964049459@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "css-loader": "^3.2.0",
+    "react": "^16.9.0",
+    "react-hot-loader": "^4.12.12",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.3"
+  }
+}
