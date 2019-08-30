@@ -1,9 +1,23 @@
-@import '~antd/dist/antd.css';
+@import '../../../node_modules/antd/dist/antd.less';
+
 body
 {
-    background-color: #8f7e7e09;
-    h1{
-        background-color: #aaa;
+    .topbar{
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        z-index: 2;
     }
-    color: #66c;
+    #allmap{
+        z-index: 1;
+    }
+    .searchBox{
+        width:200px;
+        transition-duration: .4s;
+    }
+    .searchBox:hover,
+    .searchBox:focus,
+    .searchBox:active{
+        width: 500px;
+    }
 }

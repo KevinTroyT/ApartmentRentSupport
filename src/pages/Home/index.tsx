@@ -1,36 +1,21 @@
 import React from 'react';
-import { Drawer, Button } from 'antd';
-export default class Page1 extends React.Component {
-    state = { visible: false };
-    showDrawer = () => {
-        this.setState({
-          visible: true,
-        });
-    };
-    
-    onClose = () => {
-    this.setState({
-        visible: false,
-    });
-    };
+import {config} from './config';
+export default class Home extends React.Component {
+
+    constructor(props){
+        super(props)
+    }
+    componentDidMount(){
+        let  styleConfig = config;
+        const { BMap, BMAP_STATUS_SUCCESS } = window
+        let map = new BMap.Map("allmap"); // 创建Map实例
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11); // 初始化地图,设置中心点坐标和地图级别
+        map.enableScrollWheelZoom(true);
+        map.setMapStyleV2({styleJson:styleConfig});
+    }
     render() {
         return (
-            <div>
-                <Button type="primary" onClick={this.showDrawer}>
-                    Open
-                </Button>
-                <Drawer
-                    title="Basic Drawer"
-                    placement="left"
-                    closable={false}
-                    onClose={this.onClose}
-                    visible={this.state.visible}
-                >
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                </Drawer>
-          </div>
+            <div id="allmap" style={{ position: "absolute", top: 0, left: 0, width: '100vw', height: '100vh' }}></div>
         )
     }
 }
