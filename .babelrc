@@ -1,14 +1,1 @@
-{
-    "presets": [
-        [
-            "env",
-            {
-                "loose": true,  
-                "modules": false 
-            }
-        ],
-        "es2015",
-        "react",
-      "babel-preset-stage-3"
-    ]
-}
+{ "presets":["@babel/react","@babel/env",]}

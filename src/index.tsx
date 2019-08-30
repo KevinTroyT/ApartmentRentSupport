@@ -1,4 +1,4 @@
 import React from 'react';
-
-
-export class
+import ReactDom from 'react-dom';
+import getRouter from './router/router';
+ReactDom.render(getRouter(), document.getElementById('root'));

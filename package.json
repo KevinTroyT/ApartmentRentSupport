@@ -6,11 +6,17 @@
   "author": "KevinTroyT <q964049459@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.6.1",
     "babel": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "html-withimg-loader": "^0.1.16",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "mobx": "^5.13.0",
@@ -18,6 +24,7 @@
     "mobx-react-router": "^4.0.7",
     "postcss-loader": "^3.0.0",
     "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.12",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
@@ -25,9 +32,11 @@
     "ts-lint": "^4.5.1",
     "ts-loader": "^6.0.4",
     "url-loader": "^2.1.0",
-    "webpack": "^4.39.3"
+    "webpack": "^4.39.3",
+    "webpack-dev-server": "^3.8.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.5.5",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-import": "^1.12.1",
@@ -35,6 +44,11 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
-    "babel-register": "^6.26.0"
+    "babel-register": "^6.26.0",
+    "webpack-cli": "^3.3.7"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --mode development",
+    "build": "syarn run clean && webpack --mode production"
   }
 }
