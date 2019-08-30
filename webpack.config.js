@@ -8,11 +8,6 @@ module.exports = {
     entry: {
         index: './src/index.tsx',
     },
-    // 出口文件  
-    output: {                       
-        filename: '[name].js',
-        path: path.resolve('dist')
-    },
     output: {
         filename: 'bundle.js',      // 打包后的文件名称
         path: path.resolve('dist')  // 打包后的目录，必须是绝对路径
@@ -20,8 +15,8 @@ module.exports = {
     devServer: {
         port: 3000,             // 端口
         open: true,             // 自动打开浏览器
-        hot: true,               // 开启热更新
-        overlay: true, // 浏览器页面上显示错误
+        hot: true,              // 开启热更新
+        overlay: true,          // 浏览器页面上显示错误
         historyApiFallback: true
     }, 
     module: {
@@ -82,8 +77,8 @@ module.exports = {
             title: 'index',
             template: './src/index.html',
             hash: true,
-            chunks: ['index'] 
         }),
+        new ExtractTextWebpackPlugin('css/style.css') 
        
     ],
     resolve: {
