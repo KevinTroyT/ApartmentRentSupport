@@ -28,6 +28,7 @@
     "mobx-react-router": "^4.0.7",
     "postcss-loader": "^3.0.0",
     "react": "^16.9.0",
+    "react-amap": "^1.2.8",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.12",
     "react-router": "^5.0.1",

@@ -28,10 +28,6 @@ class MenuButton extends React.Component {
                         icon="menu"
                         className="menuButton"
                     />
-                    <Search 
-                        enterButton
-                        className="searchBox"
-                    />
                 </div>
                 <Drawer
                     title="Menu"

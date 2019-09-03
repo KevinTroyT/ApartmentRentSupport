@@ -21146,12 +21146,15 @@ body .topbar {
 body #allmap {
   z-index: 1;
 }
+body #root {
+  width: 100%;
+  height: 100%;
+}
 body .searchBox {
+  position: absolute;
+  left: 70px;
+  top: 20px;
+  z-index: 2;
   width: 200px;
   transition-duration: .4s;
-}
-body .searchBox:hover,
-body .searchBox:focus,
-body .searchBox:active {
-  width: 500px;
 }

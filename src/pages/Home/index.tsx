@@ -1,21 +1,32 @@
 import React from 'react';
 import {config} from './config';
+import Search from 'antd/lib/input/Search';
+import  { Map }  from  'react-amap';
 export default class Home extends React.Component {
-
     constructor(props){
         super(props)
+        this.amapEvents = {
+            created: (mapInstance) => {
+                mapInstance.setMapStyle('amap://styles/dark')
+            }
+        }
     }
     componentDidMount(){
-        let  styleConfig = config;
-        const { BMap, BMAP_STATUS_SUCCESS } = window
-        let map = new BMap.Map("allmap"); // 创建Map实例
-        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11); // 初始化地图,设置中心点坐标和地图级别
-        map.enableScrollWheelZoom(true);
-        map.setMapStyleV2({styleJson:styleConfig});
+
     }
     render() {
         return (
-            <div id="allmap" style={{ position: "absolute", top: 0, left: 0, width: '100vw', height: '100vh' }}></div>
+            <React.Fragment>
+                <Search 
+                    enterButton
+                    className="searchBox"
+                />
+                <Map 
+                    amapkey={'c6d6cc24ae396c1966e4f38f65d0e388'} 
+                    version={'1.4.15'} 
+                    events={this.amapEvents}
+                />
+            </React.Fragment>
         )
     }
 }
