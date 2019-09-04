@@ -3,7 +3,8 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import { Drawer, Button, Input } from 'antd';
 import Home from '../pages/Home/index';
 import HelpDocument from '../pages/help/index';
-import Search from 'antd/lib/input/Search';
+import Locale from 'utils/locale/Locale';
+
 class MenuButton extends React.Component {
     state = {
         visible: false
@@ -52,11 +53,13 @@ const getRouter = () => (
     <React.Fragment>
         <Router>
             <MenuButton />
-            <Switch>
-                <Route exact path="/help" component={HelpDocument}/>
-                <Route exact path="/index" component={Home}/>
-                <Route exact path="/" component={Home}/>
-            </Switch>
+            <Locale>
+                <Switch>
+                    <Route exact path="/help" component={HelpDocument}/>
+                    <Route exact path="/index" component={Home}/>
+                    <Route exact path="/" component={Home}/>
+                </Switch>
+            </Locale>
         </Router>
     </React.Fragment>
     

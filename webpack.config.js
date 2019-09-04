@@ -104,12 +104,40 @@ module.exports = {
                 test: /\.(eot|ttf|woff|svg)$/,
                 use: 'file-loader'
             },
+            // {
+            //     test: /\.ts(x?)$/,
+            //     exclude: /node_modules/,
+            //     use: [
+            //         {
+            //             loader: 'ts-loader'
+            //         },
+            //         {
+            //             loader: 'babel-loader'
+            //         },
+            //     ],
+            //     include: /src/
+            // },
+            // {
+            //     test: /\.js(x?)$/,
+            //     exclude: /node_modules/,
+            //     use: [
+            //         {
+            //             loader: 'babel-loader'
+            //         },
+            //     ],
+            //     include: /src/
+            // },
             {
                 test: /\.(jsx|tsx|js|ts)$/,
-                loader: 'babel-loader',
-                include: /src/,
+                loader: 'ts-loader',
+                options: {
+                    transpileOnly: true,
+                    compilerOptions: {
+                        module: 'esnext'
+                    }
+                },
                 exclude: /node_modules/
-            },
+            }
             
         ]
     },
@@ -127,7 +155,7 @@ module.exports = {
         // 别名
         alias: {
           pages:path.join(__dirname,'src/pages'),
-          component:path.join(__dirname,'src/component'),
+          utils:path.join(__dirname,'src/utils'),
         },
         // 省略后缀
         extensions: ['.js', '.jsx', '.json', '.css', '.scss', '.less', '.ts', '.tsx']

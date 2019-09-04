@@ -1,11 +1,31 @@
 import React from 'react';
 import { Drawer, Button } from 'antd';
+import { ls } from '../../utils/locale/locale.state';
 export default class HelpDocument extends React.Component {
-   
+    state = {
+        lang: localStorage.getItem('locale')
+    }
+    constructor(props){
+        super(props);
+        ls.setLocale('en')
+    }
+    languageChange(){
+        if(localStorage.getItem('locale') === 'en'){
+            ls.setLocale('zh')
+        } else {
+            ls.setLocale('en')
+        }
+        this.setState({
+            lang: localStorage.getItem('locale')
+        });
+    }
     render() {
         return (
             <div>
-               <h1>这是帮助文档 </h1>
+                <h1>{ls.fm('help.document.msg')}</h1>
+                <Button onClick={this.languageChange}>
+                    {this.state.lang}
+                </Button>
             </div>
         )
     }

@@ -1,18 +1,20 @@
 import React from 'react';
-import {config} from './config';
 import Search from 'antd/lib/input/Search';
 import  { Map }  from  'react-amap';
 export default class Home extends React.Component {
+    amapEvents: { created: (mapInstance: any) => void; };
     constructor(props){
-        super(props)
+        super(props);
         this.amapEvents = {
             created: (mapInstance) => {
-                mapInstance.setMapStyle('amap://styles/dark')
+                mapInstance.setMapStyle('amap://styles/dark');
+                
             }
         }
     }
+    
     componentDidMount(){
-
+        
     }
     render() {
         return (
