@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        // "outDir": "", // 告诉ts的编译器有webpackoutput,
+        "target": "es5",
+        "allowJs": true, // 是否允许js语法再ts环境运行
+        "lib": ["es6", "dom", "es2015.promise"],
+        "jsx": "react"
+    },
+    "include": [
+        "./src/*"
+    ],
+    "exclude": [
+        "./node_modules"  
+    ],
+}
