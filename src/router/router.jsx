@@ -4,11 +4,13 @@ import { Drawer, Button, Input } from 'antd';
 import Home from '../pages/Home/index';
 import HelpDocument from '../pages/help/index';
 import Locale from 'utils/locale/Locale';
-
+import { ls } from 'utils/locale/locale.state';
 class MenuButton extends React.Component {
+
     state = {
         visible: false
     }
+    
     showDrawer = () => {
         this.setState({
             visible: true,
@@ -21,6 +23,7 @@ class MenuButton extends React.Component {
         });
     };
     render(){
+        ls.setLocale('zh');
         return (
             <div>
                 <div className="topbar">
@@ -49,8 +52,10 @@ class MenuButton extends React.Component {
         )
     }
 }
-const getRouter = () => (
-    <React.Fragment>
+const getRouter = () => {
+    
+    return (
+        <React.Fragment>
         <Router>
             <MenuButton />
             <Locale>
@@ -62,6 +67,6 @@ const getRouter = () => (
             </Locale>
         </Router>
     </React.Fragment>
-    
-);
+    )
+}
 export default getRouter;

@@ -154,8 +154,11 @@ module.exports = {
     resolve: {
         // 别名
         alias: {
-          pages:path.join(__dirname,'src/pages'),
-          utils:path.join(__dirname,'src/utils'),
+          'pages':path.resolve(__dirname,'./src/pages'),
+          'utils':path.resolve(__dirname,'./src/utils'),
+          'states':path.resolve(__dirname,'./src/states'),
+          'services':path.resolve(__dirname,'./src/services'),
+          'app':path.resolve(__dirname,'./src/utils/app')
         },
         // 省略后缀
         extensions: ['.js', '.jsx', '.json', '.css', '.scss', '.less', '.ts', '.tsx']

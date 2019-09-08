@@ -5,9 +5,8 @@ export default class HelpDocument extends React.Component {
     state = {
         lang: localStorage.getItem('locale')
     }
-    constructor(props){
+    constructor(props: any){
         super(props);
-        ls.setLocale('en')
     }
     languageChange(){
         if(localStorage.getItem('locale') === 'en'){

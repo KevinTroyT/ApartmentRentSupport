@@ -21158,3 +21158,23 @@ body .searchBox {
   width: 200px;
   transition-duration: .4s;
 }
+body .auto-item {
+  background-color: #262626;
+  border-color: #444;
+}
+body .amap-sug-result {
+  border: 1px solid #444;
+  background-color: #262626;
+  border-radius: 2px;
+}
+body .auto-item:hover {
+  background-color: #424242;
+  color: #2771e8;
+}
+body .auto-item:hover .auto-item-span {
+  background-color: #424242;
+  color: #2771e8;
+}
+body .amap-sug-result:hover {
+  border: 1px solid #2771e8;
+}
