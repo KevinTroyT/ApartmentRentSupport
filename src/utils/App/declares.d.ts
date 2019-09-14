@@ -22,6 +22,7 @@ declare module 'wangeditor';
 declare module 'rc-form';
 declare module 'zepto';
 declare module 'zepto.touch';
+declare module 'react-amap-plugin-autocomplet';
 declare var _MEIQIA: any;
 declare var sentryId: string;
 declare var sentryCode: string;
@@ -31,6 +32,7 @@ declare var contextPath: string;
 declare var appName: string;
 declare var baseUrl: string;
 declare var baseDomain: string;
+declare var AMap: any;
 
 declare module 'axios-mock-adapter';
 declare module 'axios-progress-bar' {
